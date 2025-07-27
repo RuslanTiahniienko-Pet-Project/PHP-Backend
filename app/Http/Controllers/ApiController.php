@@ -47,7 +47,7 @@ class ApiController extends Controller
     public function fetchExternalTasks()
     {
         try {
-            $externalApiUrl = config('app.external_api_url');
+            $externalApiUrl = config('telegram.external_api_url');
             
             if (!$externalApiUrl) {
                 return response()->json(['error' => 'External API URL not configured'], 400);
